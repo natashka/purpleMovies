@@ -1,0 +1,12 @@
+.root {
+    font-family: 'Poppins', sans-serif;
+    color: #8E95A9;
+}
+.fs16 {
+    font-size: 16px;
+    line-height: 24px;
+}
+.fs20 {
+    font-size: 20px;
+    line-height: 32px;
+}
