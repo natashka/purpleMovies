@@ -1,0 +1,25 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121829CC;
+    backdrop-filter: blur(40px);
+    height: 80px;
+    opacity: 1;
+    padding: 16px 120px;
+}
+
+.bookmark {
+    height: 40px;
+    width: 40px;
+}
+
+.menuHeaderMenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.menuHeaderLogin {
+    display: flex;
+}

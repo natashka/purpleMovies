@@ -1,8 +1,10 @@
 .btn {
-    height: 46px;
-    border-radius: 20%;
-    background-color: #7d43d7;
+    height: 56px;
+    border-radius: 12px;
+    background-color: #7B6EF6;
     color: white;
     text-align: center;
-    padding: 2px;
+    padding: 16px 32px;
+    border: 2px solid #7B6EF6;
+    max-width: 201px;
 }

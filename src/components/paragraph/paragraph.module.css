@@ -1,11 +1,20 @@
 .root {
     font-family: 'Poppins', sans-serif;
     color: #8E95A9;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: left;
 }
+
+.paragraph {
+    height: 48px;
+}
+
 .fs16 {
     font-size: 16px;
     line-height: 24px;
 }
+
 .fs20 {
     font-size: 20px;
     line-height: 32px;
