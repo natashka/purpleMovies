@@ -1,5 +1,5 @@
 import { MenuHeader } from "../../layouts/menuHeader/MenuHeader.jsx";
-import { Input } from "../../components/input/Input.jsx";
+import { Search } from "../../components/search/Search.jsx";
 import { Button } from "../../components/button/Button.jsx";
 import { useState } from "react";
 
@@ -18,7 +18,7 @@ export function LogInPage() {
           maxWidth: "384px",
         }}
       >
-        <Input
+        <Search
           isComplex={false}
           name="login"
           placeholder="Введите имя"
@@ -28,7 +28,7 @@ export function LogInPage() {
             setUsername(e.target.value);
           }}
         />
-        <Button onClick={() => setValue("")} text="Войти в профиль" />
+        <Button onClick={() => setUsername("")} text="Войти в профиль" />
       </div>
     </>
   );

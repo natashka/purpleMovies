@@ -1,7 +1,7 @@
 import classNames from "classnames";
-import styles from "../input/input.module.css";
+import styles from "./search.module.css";
 
-export function Input({ isComplex, name, onChange, placeholder, value }) {
+export function Search({ isComplex, name, onChange, placeholder, value }) {
   return (
     <>
       <div className={classNames(styles.searchWrapper)}>
