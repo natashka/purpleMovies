@@ -8,7 +8,9 @@ import { useState } from "react";
 
 export function MainPage() {
   const [value, setValue] = useState("");
-  const onSearch = (value) => {};
+  const onSearch = (val) => {
+    console.log(`Found: ${val}`);
+  };
   return (
     <>
       <MenuHeader />
