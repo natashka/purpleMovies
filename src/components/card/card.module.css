@@ -1,0 +1,69 @@
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    height: 520px;
+    gap: 16px;
+    opacity: 1;
+    border-radius: 12px;
+    padding: 8px 8px 16px;
+    background-color: #20283ECC;
+    backdrop-filter: blur(80px);
+
+}
+
+.card-poster {
+    position: relative;
+    color: #FFAD49;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.card-poster img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.card-rating {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    gap: 4px;
+    opacity: 1;
+    border-radius: 8px;
+    padding: 4px 8px;
+    background: #000000A6;
+    backdrop-filter: blur(8px);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    height: 80px;
+    color: white;
+    gap: 16px;
+}
+
+.like-container {
+    display: inline-flex;
+    /*flex-direction: row;*/
+    font-size: 16px;
+    color: #7B6EF6;
+    align-items: center;
+    gap: 8px;
+}
+
+.like {
+    height: 24px;
+    width: 24px;
+}

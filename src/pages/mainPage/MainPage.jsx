@@ -5,6 +5,9 @@ import { Paragraph } from "../../components/paragraph/Paragraph.jsx";
 import { Search } from "../../components/search/Search.jsx";
 import { Button } from "../../components/button/Button.jsx";
 import { useState } from "react";
+import styles from "./mainPage.module.css";
+import { moviesList } from "../../assets/data/moviesList.js";
+import { Card } from "../../components/card/Card.jsx";
 
 export function MainPage() {
   const [value, setValue] = useState("");
@@ -15,7 +18,7 @@ export function MainPage() {
     <>
       <MenuHeader />
       <Main>
-        <div className="search-frame" style={{ paddingLeft: "120px" }}>
+        <div className="search-frame" style={{ paddingLeft: "60px" }}>
           <div className="frame" style={{ maxWidth: "588px" }}>
             <Header text="Поиск" />
             <Paragraph text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное." />
@@ -42,6 +45,11 @@ export function MainPage() {
               text="Искать"
             />
           </div>
+        </div>
+        <div className={styles.films}>
+          {moviesList.map((movie) => (
+            <Card key={movie.id} {...movie} />
+          ))}
         </div>
       </Main>
     </>
