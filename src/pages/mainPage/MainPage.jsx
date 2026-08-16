@@ -5,9 +5,7 @@ import { Paragraph } from "../../components/paragraph/Paragraph.jsx";
 import { Search } from "../../components/search/Search.jsx";
 import { Button } from "../../components/button/Button.jsx";
 import { useState } from "react";
-import styles from "./mainPage.module.css";
-import { moviesList } from "../../assets/data/moviesList.js";
-import { Card } from "../../components/card/Card.jsx";
+import { CardList } from "../../components/cardList/CardList.jsx";
 
 export function MainPage() {
   const [value, setValue] = useState("");
@@ -46,11 +44,7 @@ export function MainPage() {
             />
           </div>
         </div>
-        <div className={styles.films}>
-          {moviesList.map((movie) => (
-            <Card key={movie.id} {...movie} />
-          ))}
-        </div>
+        <CardList />
       </Main>
     </>
   );
