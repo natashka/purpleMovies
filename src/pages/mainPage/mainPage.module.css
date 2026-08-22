@@ -1,6 +1,13 @@
-/*.films {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: center;*/
-/*    gap: 10px;*/
-/*}*/
+.search-frame {
+    padding-left: 0;
+}
+
+.frame {
+    max-width: 588px;
+}
+
+.search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

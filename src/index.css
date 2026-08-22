@@ -51,7 +51,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 img {
@@ -125,3 +125,7 @@ p {
 /*    padding: 4px 8px;*/
 /*    background: var(--code-bg);*/
 /*}*/
+#root {
+    background-color: #121829;
+    padding: 16px 120px;
+}

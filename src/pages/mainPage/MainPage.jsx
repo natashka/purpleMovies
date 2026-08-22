@@ -6,6 +6,8 @@ import { Search } from "../../components/search/Search.jsx";
 import { Button } from "../../components/button/Button.jsx";
 import { useState } from "react";
 import { CardList } from "../../components/cardList/CardList.jsx";
+import styles from "./mainPage.module.css";
+import classNames from "classnames";
 
 export function MainPage() {
   const [value, setValue] = useState("");
@@ -16,15 +18,12 @@ export function MainPage() {
     <>
       <MenuHeader />
       <Main>
-        <div className="search-frame" style={{ paddingLeft: "60px" }}>
-          <div className="frame" style={{ maxWidth: "588px" }}>
+        <div className={classNames(styles["search-frame"])}>
+          <div className={classNames(styles["frame"])}>
             <Header text="Поиск" />
             <Paragraph text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное." />
           </div>
-          <div
-            className="search"
-            style={{ display: "flex", gap: "8px", alignItems: "center" }}
-          >
+          <div className={classNames(styles["search"])}>
             <Search
               isComplex={true}
               name="search"

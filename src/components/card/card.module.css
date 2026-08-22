@@ -45,6 +45,7 @@
     backdrop-filter: blur(8px);
 }
 
+
 .info-container {
     display: flex;
     flex-direction: column;

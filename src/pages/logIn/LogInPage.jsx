@@ -2,22 +2,15 @@ import { MenuHeader } from "../../layouts/menuHeader/MenuHeader.jsx";
 import { Search } from "../../components/search/Search.jsx";
 import { Button } from "../../components/button/Button.jsx";
 import { useState } from "react";
+import styles from "./LogInPage.module.css";
+import classNames from "classnames";
 
 export function LogInPage() {
   const [username, setUsername] = useState("");
   return (
     <>
       <MenuHeader />
-      <div
-        className="login"
-        style={{
-          display: "flex",
-          gap: "8px",
-          flexDirection: "column",
-          alignItems: "left",
-          maxWidth: "384px",
-        }}
-      >
+      <div className={classNames(styles["login"])}>
         <Search
           isComplex={false}
           name="login"
