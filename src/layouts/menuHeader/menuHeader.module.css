@@ -23,4 +23,17 @@
 
 .menuHeaderLogin {
     display: flex;
+    gap: 10px;
+}
+
+.menu-header__logo {
+
+}
+
+.menu-header__search {
+
+}
+
+.menu-header__films {
+
 }

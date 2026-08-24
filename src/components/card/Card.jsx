@@ -11,7 +11,7 @@ export function Card({ title, image, rating }) {
       </div>
 
       <div className={styles["info-container"]}>
-        <div className={"title"}>{title}</div>
+        <div className={styles["title"]}>{title}</div>
         <div className={styles["like-container"]}>
           <img className={styles["like"]} src={"/like.svg"} alt={"like-icon"} />
           <p>В избранное</p>

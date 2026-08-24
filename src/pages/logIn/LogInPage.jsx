@@ -2,7 +2,7 @@ import { MenuHeader } from "../../layouts/menuHeader/MenuHeader.jsx";
 import { Search } from "../../components/search/Search.jsx";
 import { Button } from "../../components/button/Button.jsx";
 import { useState } from "react";
-import styles from "./LogInPage.module.css";
+import styles from "./logInPage.module.css";
 import classNames from "classnames";
 
 export function LogInPage() {
