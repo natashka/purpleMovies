@@ -45,6 +45,7 @@
     backdrop-filter: blur(8px);
 }
 
+
 .info-container {
     display: flex;
     flex-direction: column;
@@ -66,4 +67,7 @@
 .like {
     height: 24px;
     width: 24px;
+}
+.title {
+
 }
