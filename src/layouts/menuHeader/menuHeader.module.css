@@ -18,12 +18,23 @@
 .menuHeaderMenu {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 30px;
+}
+
+.menu-header__user {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    gap: 5px;
 }
 
 .menuHeaderLogin {
     display: flex;
     gap: 10px;
+}
+
+.menu-header__logout {
+
 }
 
 .menu-header__logo {
@@ -36,4 +47,9 @@
 
 .menu-header__films {
 
+}
+
+a.text {
+    color: #A8AEBF;
+    text-decoration: none;
 }

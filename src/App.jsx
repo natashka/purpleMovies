@@ -1,7 +1,7 @@
-import { MainPage } from "./pages/mainPage/MainPage.jsx";
+import { LogInPage } from "./pages/logIn/LogInPage.jsx";
 
 function App() {
-  return <MainPage />;
+  return <LogInPage />;
 }
 
 export default App;
