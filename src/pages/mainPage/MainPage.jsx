@@ -1,4 +1,3 @@
-import { MenuHeader } from "../../layouts/menuHeader/MenuHeader.jsx";
 import { Main } from "../../layouts/main/Main.jsx";
 import { Header } from "../../components/header/Header.jsx";
 import { Paragraph } from "../../components/paragraph/Paragraph.jsx";
@@ -11,12 +10,13 @@ import classNames from "classnames";
 
 export function MainPage() {
   const [value, setValue] = useState("");
+
   const onSearch = (val) => {
     console.log(`Found: ${val}`);
   };
   return (
     <>
-      <MenuHeader />
+      {/*<MenuHeader />*/}
       <Main>
         <div className={classNames(styles["search-frame"])}>
           <div className={classNames(styles["frame"])}>

@@ -1,18 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export function useLocalStorage(key) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const res = JSON.parse(localStorage.getItem(key));
-    if (res) {
-      setData(res);
+  // Инициализируем стейт СИНХРОННО с помощью функции-колбэка
+  const [data, setData] = useState(() => {
+    try {
+      const savedData = localStorage.getItem(key);
+      // Если данные есть, парсим их, если нет — возвращаем пустой массив []
+      return savedData ? JSON.parse(savedData) : [];
+    } catch (error) {
+      console.error("Ошибка чтения из localStorage:", error);
+      return [];
     }
-  }, []);
+  });
 
   const saveData = (newData) => {
-    localStorage.setItem(key, JSON.stringify(newData));
-    setData(newData);
+    try {
+      localStorage.setItem(key, JSON.stringify(newData));
+      setData(newData);
+    } catch (error) {
+      console.error("Ошибка записи в localStorage:", error);
+    }
   };
 
   return [data, saveData];
