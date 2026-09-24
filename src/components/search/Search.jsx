@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import styles from "./search.module.css";
 
-export function Search({ isComplex, name, onChange, placeholder, value }) {
+export function Search({ ref, isComplex, name, onChange, placeholder, value }) {
   return (
     <>
       <div className={classNames(styles.searchWrapper)}>
@@ -13,6 +13,7 @@ export function Search({ isComplex, name, onChange, placeholder, value }) {
           />
         )}
         <input
+          ref={ref}
           type={"text"}
           name={name}
           onChange={onChange}
