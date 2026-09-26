@@ -1,10 +1,9 @@
-import { createContext, useMemo, useState } from "react";
+import { createContext, useMemo } from "react";
 import { useUsers } from "../hooks/useUsers.jsx";
 
 export const UserContext = createContext(null);
 
 export function UserContextProvider({ children }) {
-  const [user, setUser] = useState(null);
   const [currentUser, loginLS, logoutLS] = useUsers();
 
   const login = (newUser) => {
@@ -14,18 +13,17 @@ export function UserContextProvider({ children }) {
   };
 
   const logout = () => {
-    setUser(null);
     // Здесь можно удалить токен из localStorage
     logoutLS();
   };
   const value = useMemo(
     () => ({
       user: currentUser.name,
-      isAuth: user !== null,
+      isAuth: currentUser.name !== null,
       login,
       logout,
     }),
-    [user],
+    [currentUser],
   );
   return <UserContext value={value}>{children}</UserContext>;
 }
