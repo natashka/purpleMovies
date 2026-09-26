@@ -1,16 +1,17 @@
-import {MenuHeader} from "../../layouts/menuHeader/MenuHeader.jsx";
-import {Search} from "../../components/search/Search.jsx";
-import {Button} from "../../components/button/Button.jsx";
+import { MenuHeader } from "../../layouts/menuHeader/MenuHeader.jsx";
+import { Search } from "../../components/search/Search.jsx";
+import { Button } from "../../components/button/Button.jsx";
 import styles from "./logInPage.module.css";
 import classNames from "classnames";
-import {Main} from "../../layouts/main/Main.jsx";
-import {useUsers} from "../../hooks/useUsers.jsx";
-import {useEffect, useRef, useState} from "react";
+import { Main } from "../../layouts/main/Main.jsx";
+import { useContext, useEffect, useRef, useState } from "react";
+import { UserContext } from "../../context/UserContext.jsx";
 
 export function LogInPage() {
   const [user, setUser] = useState("");
   //const [result, setResult] = useState("");
-  const [currentUser, login, logout] = useUsers();
+  //const [currentUser, login, logout] = useUsers();
+  const { login } = useContext(UserContext);
 
   const loginButtonRef = useRef(null);
   const loginInputRef = useRef(null);
@@ -68,7 +69,7 @@ export function LogInPage() {
 
   return (
     <>
-      <MenuHeader currentUser={currentUser} logout={logout} />
+      <MenuHeader />
       <Main>
         <div className={classNames(styles["login"])}>
           <Search
