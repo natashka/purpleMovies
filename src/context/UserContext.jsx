@@ -7,7 +7,6 @@ export function UserContextProvider({ children }) {
   const [currentUser, loginLS, logoutLS] = useUsers();
 
   const login = (newUser) => {
-    setUser(newUser);
     // Здесь можно сохранить токен в localStorage
     loginLS(newUser);
   };
