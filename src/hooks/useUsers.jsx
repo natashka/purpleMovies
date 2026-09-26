@@ -6,11 +6,11 @@ export function useUsers() {
 
   // Ищем залогиненного пользователя
   const currentUser = users?.find((user) => user.isLogined) ?? {
-    name: "",
+    name: null,
     isLogined: false,
   };
 
-  const login = (name) => {
+  const loginLS = (name) => {
     const trimmedName = name.trim();
     if (!trimmedName) return;
 
@@ -32,12 +32,12 @@ export function useUsers() {
     }
   };
 
-  const logout = () => {
+  const logoutLS = () => {
     const nextUsers = users.map((user) => {
       return user.isLogined ? { ...user, isLogined: false } : user;
     });
     setUsers(nextUsers);
   };
 
-  return [currentUser, login, logout];
+  return [currentUser, loginLS, logoutLS];
 }

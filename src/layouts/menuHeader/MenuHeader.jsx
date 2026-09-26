@@ -1,8 +1,11 @@
 // import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import classNames from "classnames";
 import styles from "./menuHeader.module.css";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext.jsx";
 
-export function MenuHeader({ currentUser, logout }) {
+export function MenuHeader() {
+  const { user, isAuth, logout } = useContext(UserContext);
   return (
     <header className={classNames(styles.navBar)}>
       <div className={classNames(styles["menu-header__logo"])}>
@@ -24,15 +27,15 @@ export function MenuHeader({ currentUser, logout }) {
             Мои фильмы
           </a>
         </div>
-        {currentUser.isLogined && (
+        {isAuth && (
           <div className={classNames(styles["menu-header__user"])}>
             <a className={classNames(styles["text"])} href={"#"}>
-              {currentUser.name}
+              {user}
             </a>
             <img src={"/user.svg"} alt={"user"} />
           </div>
         )}
-        {currentUser.isLogined ? (
+        {isAuth ? (
           <div className={classNames(styles["menu-header__logout"])}>
             <a
               className={classNames(styles["text"])}
